@@ -23,13 +23,16 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link active" aria-current="page" href="#">Novedades</a>
-                    <a class="nav-link" href="#">Proyectos</a>
-                    <a class="nav-link" href="#">Contacto</a>
-                </div>
-            </div>
+           
+            <?php wp_nav_menu( array( 
+                'theme_location' => 'menu-principal' ,
+                'depth' => 2,
+                'container' => 'div',
+                'container_class' => 'collapse navbar-collapse',
+                'container_id' => 'navbarSupportedContent',
+                'menu_class' => 'navbar-nav ms-auto',
+                ) ); ?>
+
         </div>
     </nav>
 
